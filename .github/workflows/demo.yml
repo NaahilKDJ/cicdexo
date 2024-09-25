@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
      - uses: actions/checkout@v3
-        with:
+       with:
           ref: ${{ github.event.pull_request.head.sha }}
      - name: Test
-      env:
+       env:
         REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
+       run: |
         cat requirements.txt
